@@ -1,0 +1,5 @@
+CREATE DATABASE t2_drw;
+USE t2_drw;
+CREATE TABLE data_source(name VARCHAR(100) PRIMARY KEY, INDEX idx_source (name));
+CREATE TABLE title(name VARCHAR(100) PRIMARY KEY, source VARCHAR(100), data_added TIMESTAMP DEFAULT CURRENT_TIMESTAMP, FOREIGN KEY source REFERENCES data_source(name));
+CREATE TABLE data( 
