@@ -4,7 +4,7 @@ import mysql.connector
 def create_connection():
     connection = mysql.connector.connect(
         user='root',
-        password='09218692170',
+        password='',
         host='localhost',
         database='t2_drw'
     )
